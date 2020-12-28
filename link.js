@@ -297,3 +297,239 @@ if (myFriend===aveesFriend){
 }else{
     console.log(false);
 };
+
+
+//Day 2
+//logocal operators
+
+var myAge = 25;
+
+if (myAge===25 || myAge<25 || myAge>18){
+    console.log("You can join with us")    
+}else{
+    console.log("You can not join with us")
+}
+
+
+if (myAge>18 && myAge==25&& myAge<30){
+    console.log("U are adult")
+}else{
+    console.log("U r not adult")
+}
+
+if (myAge!==25 && myAge<30){
+    console.log("U are Outside codition")
+}else if(myAge===18 && myAge<18){
+    console.log("u also outside condition,when condition apply u can come")
+}else if(myAge===18 || myAge<18){
+    console.log("wait for approval")
+}else if(myAge===25 && myAge<30 && myAge>18){
+    console.log("come in")
+}else{
+    console.log("get Out from here")
+}
+
+
+//loop in js
+
+//while loop in js
+
+var age = 10
+while(age<18){
+    console.log("ur age is under 18 ")
+    age++;
+}
+document.write("stop")
+
+var myAge = 15;
+while(myAge<=25){
+    console.log("my age is under 25");
+    myAge++;
+
+}
+document.write("stop loop please");
+
+var myAge = 25;
+while (myAge>=10){
+    console.log("age is over 10");
+    document.write("age is over 10")
+    myAge --;
+}
+
+
+//for loop in js
+
+for (age=5; age<10; age ++){
+    console.log("age is less than 10");
+    document.write("age is less than 10")
+}
+
+
+//for loop with a tag 
+var links = document.getElementsByTagName("a");
+
+for (link=0; link<links.length;link++){
+    console.log("this is link" + link);
+    document.write("this is link" + link);
+}
+
+document.write("all link now write in loop");
+
+
+
+var pTag = document.getElementsByTagName("p");
+
+for (tags=0; tags<pTag.length; tags++){
+    console.log("tags are" + tags);
+    document.write("tags are" + tags);
+
+}
+
+document.write("all tag in now loop")
+
+
+var allTag = document.getElementsByTagName("p");
+
+for (tag=2; tag<=allTag.length; tag++){
+    document.write("new tags are" + tag);
+
+}
+
+var newTag = document.getElementsByTagName("a");
+
+for (tag=3; tag<=newTag.length; tag++){
+    console.log("here is console tag" + tag);
+    document.write("here is the doc tag" + tag);
+
+}
+
+docTag = document.getElementsByTagName("a");
+
+for (doc=2; doc<=docTag.length; doc++){
+    document.write("tag define as docTag" + doc);
+}
+
+
+//Break and Continue
+
+for(i=2; i<=10; i++){
+    console.log(i);
+    if(i===7){
+        break;
+    }
+}
+
+for (age=10; age>=2; age++){
+    console.log(age);
+    if (age===15){
+    break;
+    }
+}
+
+
+for(number=10; number<=20; number++){
+    console.log(number);
+    if (number===15){
+    break;
+    }
+}
+
+for(roll=0; roll<=10; roll++){
+    console.log(roll);
+    if(roll===2){
+        break;
+    }
+
+    
+}
+
+//continue and break in combined
+
+for(item=2; item<=20; item++){
+    if (item===3 || item==5){
+        continue;
+    }
+    console.log(item);
+    if(item===10){
+        break;
+    }
+}
+
+for(work=10; work<=20; work++){
+    if(work===13 || work===14){
+        continue;
+    }
+    console.log(work);
+
+    if (work===19){
+        break;
+    }
+    console.log(work);
+}
+
+
+for (task=0; task<=30; task++){
+    if (task===7 || task===11 || task ===15){
+        continue;
+    }
+    console.log(task);
+
+    if(task===20){
+        break;
+    }
+    console.log(task);
+
+}
+
+//practical example of loops in js
+//add class in js1.html links properties, check in element
+var links = document.getElementsByTagName("a");
+
+for (link=0; link<links.length; link++){
+    links[link].className = "newLink-" + link;
+
+}
+
+var allAge = document.getElementsByTagName("p");
+
+for (age=0; age<allAge.length; age ++){
+    allAge[age].className = "age-" + age;
+}
+
+// how to function work in js 
+
+function getAverage(a,b){
+    var average = (a+b)/2;
+    var newAverage = (a*b)/2;
+
+    var udatedAverage = newAverage/average;
+    
+    console.log(newAverage);
+    console.log(average);
+    console.log(udatedAverage);
+}
+getAverage(10,10)
+//if we send 3 parameter inside the function than it will accept first two value 
+//getAverage(10,10,13)
+
+function getResult(bangla,english){
+    var result = bangla + english;
+    console.log(result);
+    return result;
+}
+
+var myResult = getResult(87,76);
+console.log("total result of my exam " + myResult);
+
+
+function getCgpa(bangla,english,math,physics){
+    var averageCgpa = (bangla + english + math + physics)/getCgpa.length;
+    console.log("cgpa length:" + getCgpa.length);
+    console.log(averageCgpa);
+    return averageCgpa;
+
+}
+getCgpa(4,3,4,2);
+var myCgpa = getCgpa(4,3,4,2);
+console.log("my cgpa is " + myCgpa);
+
