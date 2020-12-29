@@ -533,3 +533,207 @@ getCgpa(4,3,4,2);
 var myCgpa = getCgpa(4,3,4,2);
 console.log("my cgpa is " + myCgpa);
 
+function myAmount(bank,cash,paycard){
+    var avgMyAmount = (bank+cash+paycard)/myAmount.length;
+    console.log(avgMyAmount);
+    return avgMyAmount;
+}
+myAmount(110635,73545,75564);
+var newMyAmount = myAmount(110635,73545,75564);
+console.log("newMyAmount is : " + newMyAmount);
+
+
+
+function ourTeam(football,cricket,badminton){
+    var winingPercentage = (football + cricket + badminton) / ourTeam.length;
+    console.log("our team number: " + ourTeam.length);
+    return winingPercentage;
+}
+
+var ourNewTeam = ourTeam(23,13,45);
+console.log("our new team are :" + ourNewTeam);
+
+// numbers in js
+
+var numberOne = 5;
+var numberTwo = 10;
+var numberSum = (numberOne + numberTwo);
+
+console.log(numberSum)
+
+
+// when we sum two variable one have string another have a number, then it will sum string and sum 
+
+var numberOne = 10;
+var numberTwo = "10";
+var numberThree = (numberOne + numberTwo);
+// type of 
+console.log(typeof(numberThree));
+// it will show 1010
+console.log(numberThree);
+
+
+// Math use in js
+
+var number1 = 11.33;
+var number2 = 34;
+
+var numberRound = Math.round(number1 + number2);
+// it will show 45, instead of 45.33
+console.log(numberRound);
+
+var numberFloor = Math.floor(number1 + number2);
+// it will show 45, instead of 45.33, it is similer to Math.round method
+console.log(numberFloor);
+
+
+var numberMin = Math.min(number1,number2);
+//it will show minimum value of variable
+console.log(numberMin);
+
+var numberMax = Math.max(number1,number2);
+// it will show maximum value of variable
+console.log(numberMax);
+
+var numberCeil = Math.ceil(number1 + number2);
+//it will show 46, instead of 45.33
+console.log(numberCeil);
+
+
+// it will show the pi value of variable by using builtin pi function
+var numberPi = Math.PI;
+console.log(numberPi);
+
+// Not a Number : NaN in Js
+
+var appleNumber = 10;
+var appleName = "apple";
+
+var multiplyApple = (10*"apple");
+// its return NaN
+console.log(multiplyApple)
+
+var devideApple = (10/"apple");
+//its return NaN
+console.log(devideApple);
+
+var subtractApple = (10-"aplle");
+//its return NaN
+console.log(subtractApple);
+
+// check NaN or Not NaN
+
+var a = "apple";
+var b = 5;
+var x = 10;
+var c = a * b;
+var z = b * x;
+if (isNaN(a)){
+    console.log("its return true " + c);
+} else{
+    console.log("its return false");
+}
+
+// check NaN or Not NaN
+
+if (isNaN(b)){
+    console.log(true);
+} else{
+    console.log(false);
+}
+
+// check NaN or Not NaN
+
+if(isNaN(x)){
+    console.log("its return", + c )
+
+} else{
+    console.log("its return: ", + z);
+}
+ if(!isNaN(b)){
+     console.log("its a number");
+
+ }else {
+     console.log("its not a number");
+ }
+
+
+
+// string in js
+
+var myString = ("hello");
+console.log(myString);
+// string length
+console.log(myString.length);
+//uppercase string
+console.log(myString.toUpperCase());
+//index of any letter of this string
+console.log("index number of l: " + myString.indexOf("l"));
+
+
+var myString2 = ("Hello 'Iam' tamjid");
+console.log(myString2);
+// string length
+console.log(myString2.length);
+// string uppercase
+console.log(myString2.toUpperCase());
+// index number check of any letter in string
+console.log("index number of d: " + myString2.indexOf("d"));
+
+var myString3 = ("Hello I'am Tamjid");
+console.log(myString3);
+// string length
+console.log(myString3.length);
+//string uppercase
+console.log(myString3.toUpperCase());
+// check index number of any letter/word in string
+console.log("index number of Tam: " + myString3.indexOf("Tam"));
+// tam returns -1; because of js not find tam instead of Tam
+console.log("index number of Tam: " + myString3.indexOf("tam"));
+
+
+//check if tam is on string or not
+if (myString3.indexOf(("Shuvo")!==-1)){
+    console.log("avee");
+}else{
+    console.log("tamjid");
+}
+
+
+if (myString3.indexOf(("Tam")===-1)){
+    console.log("index of Tam in myString: " + myString3.indexOf("Tam"));
+}else{
+    console.log("index not valid");
+}
+
+
+//comparision in  string
+
+var a = "abc";
+var b = "ABC";
+
+var aLower = a.toLowerCase();
+var bLower = b.toLowerCase();
+var cLower = "bcd";
+// its print false
+if(a===b){
+    console.log("true");
+}else{
+    console.log("false");
+}
+
+//its print true
+if (aLower===bLower){
+    console.log("true");
+}else{
+    console.log("false");
+}
+
+aLower = "abc";
+cLower = "xyz";
+
+if (aLower<cLower){
+    console.log("aLower lower than cLower");
+}else{
+    console.log("aLower not lower than cLower ")
+}
