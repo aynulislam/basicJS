@@ -737,3 +737,98 @@ if (aLower<cLower){
 }else{
     console.log("aLower not lower than cLower ")
 }
+
+// string slice in js
+
+var myName = "Aynul Islam Tamjid";
+var myNameSlice = myName.slice(4);
+console.log(myName);
+console.log(myNameSlice);
+
+var myNameDoubleSlice = myName.slice(3,8);
+console.log(myNameDoubleSlice);
+
+
+//split in js
+// split method convert string to array in js
+
+var myFruits = "apple, banana, orange, mango";
+var myFruitsArray = myFruits.split(",");
+console.log(myFruitsArray);
+
+var myClass = "one, two, three, four";
+console.log(myClass);
+var myClassArray = myClass.split(",");
+console.log(myClassArray);
+
+//its replce by zero and converto string to array
+console.log(myClass.replace("one","zero").split(","));
+
+//its convert uppercase, also convert string to array
+console.log(myClass.toUpperCase().split(","));
+
+// its return true, because myClass variable string start with "a"
+console.log(myClass.startsWith("o"));
+
+// its return true bcz myClass variable ends with 0
+console.log(myClass.endsWith("r"));
+
+
+// valueOf method returns same value of variable, its using in object
+console.log(myClass.valueOf());
+
+// its return last index number of a searching letter of variable
+console.log(myClass.lastIndexOf("o"));
+
+/// Array In Javascript
+
+//insert value in array using arrayName[position] = value;
+var myArray = [];
+console.log(myArray);
+myArray[0] = "apple";
+myArray[1] = "mango";
+myArray[2] = true;
+myArray[3] = "banana";
+console.log(myArray);
+
+// upate value in arary usig arrayName[position] = value;
+
+myArray[2] = false;
+console.log(myArray);
+
+// direct array create
+
+var myNewArray = [1,5,11,7,2,56,6,true,"hello","bye",false,[12,454,45]];
+console.log(myNewArray);
+
+
+// check array length, its return array length of an array
+console.log(myNewArray.length);
+
+// array sorting by using sort() function
+console.log(myNewArray.sort());
+
+/// arrays item willbe replace by using reverse()function in js
+console.log(myNewArray.reverse());
+
+
+// object in javascript//
+
+
+//create object by using Object() method
+var myCar = new Object();
+myCar.maxSpeed = 50;
+myCar.driver = "aynul";
+myCar.brand = "mazda";
+
+
+// its return  myCar objects all value
+console.log(myCar);
+// its printing drivers value of this object
+console.log(myCar.driver);
+
+myCar.drive = function(){
+    console.log("this is drive function");
+}
+console.log(myCar.drive());
+console.log(myCar);
