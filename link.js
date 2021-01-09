@@ -832,3 +832,382 @@ myCar.drive = function(){
 }
 console.log(myCar.drive());
 console.log(myCar);
+
+var myHouse = new Object();
+myHouse.area = "mirpur";
+myHouse.unit = "d3"
+myHouse.rent = function(){console.log("house not for salse");};
+console.log(myHouse);
+
+// its show rent() output
+(myHouse.rent());
+
+// another way to define object
+var myHomeTown = {dstrict : "feni",po:"nababpur", thana : "sonagazi", house_no:12, rent:function(){console.log("nice home");}};
+console.log(myHomeTown);
+console.log(myHomeTown.dstrict);
+
+// it returns rent() of myHomeTown object
+myHomeTown.rent();
+
+var mySalary = {
+    name:"aynul",
+    employee_id: "DGT-000143",
+    
+    salary:function(basic,house_rent,food,travel){
+        console.log("my salary is :" + (basic+house_rent+house_rent+food+travel));
+    },
+
+    totalSalary: function(basic, house_rent, food, travel){
+        return parseInt(basic+house_rent+travel+food);
+    }
+
+};
+mySalary.totalSalary(12000,2000,1000,2000);
+console.log( (mySalary));
+
+//its return keys of an object , and its an array
+var keys = Object.keys(mySalary);
+console.log(keys);
+
+var newKeys = Object.keys(myHouse);
+console.log( myHouse);
+
+// its return values of an object and its an array
+var values = Object.values(mySalary);
+console.log( values);
+
+var newValues = Object.values(myHouse);
+console.log( newValues);
+
+// its return entries of object with value and keys and its an array
+
+var entries = Object.entries(myHouse);
+console.log( entries);
+
+var newEmtries = Object.entries(mySalary);
+console.log( mySalary);
+
+
+//using this keyward
+var myCar2 = {
+    maxspeed : 45,
+    driver : "avee",
+    drive : function(speed,time){
+        console.log(speed*time);
+    },
+    driverInfo: function(){
+        console.log("driver info " + this.driver);
+    }
+};
+
+for (car in myCar2, myCar2++){
+    console.log(myCar2);
+
+}
+
+//myCar2.driverInfo();
+//myCar2.drive(40,4);
+//console.log(myCar2.drive(40,2));
+
+//dynamic object calling
+
+var Car = function(maxSpeed, driver){
+
+    this.maxSpeed = maxSpeed;
+    this.driver = driver;
+    
+    this.logDriver = function(){
+        console.log("My Name is " + this.driver, "maximum speed of my car " + this.maxSpeed);
+    }; 
+
+}
+
+var myCar = new Car(70,"avee");
+var myCar2 = new Car(23, "aynul");
+
+//myCar.drive(20,6);
+myCar2.logDriver();
+
+
+var Office = function(it,commercial){
+    this.it = it;
+    this.commercial = commercial;
+    console.log("dekko isho dept section name are " + this.it, "and " +this.commercial )
+    this.merchandizing = function(top,bottom){
+        this.top = top;
+        this.bottom = bottom;
+    };
+
+}
+
+var deptOffice = new Office("software", "export");
+
+// js date object
+
+var myDate = new Date();
+console.log(myDate);
+
+
+var myPastDate = new Date(1995, 11, 3, 10, 22, 23);
+var myFutureDate = new Date (2021, 1, 1, 11, 34, 34);
+
+console.log(myPastDate);
+
+
+
+/// regular expression
+
+// exec() = Executes a search for a match in a string.It returns an array of information or null on a mismatch
+
+// test() = Tests for a match in a string. It returns true or false.
+
+// match() = Returns an array containing all of the matches, including capturing groups, or null if no match is found.
+
+// matchAll() = Returns an iterator containing all of the matches, including capturing groups.
+
+// search() = Tests for a match in a string. It returns the index of the match, or -1 if the search fails.
+
+// replace() = Executes a search for a match in a string, and replaces the matched substring with a replacement substring.
+
+// replaceAll() = Executes a search for all matches in a string, and replaces the matched substrings with a replacement substring.
+
+// split() = Uses a regular expression or a fixed string to break a string into an array of substrings.
+
+var myRe = new RegExp('d(b+)d', 'g');
+var myExp = myRe.exec('cdbbdbsbz');
+console.log(myExp);
+
+
+var myRegular = new RegExp("ca*", "g","i");
+var myNewExp = myRegular.exec("caamcmcdcmbmcmcam");
+console.log(myNewExp);
+
+
+var exp1 = new RegExp("a|b","g");
+var regExp = exp1.exec("abcdef");
+console.log(regExp);
+
+
+
+// js es6
+
+
+
+// variable declare
+
+//using const
+const aynulsAge = 25;
+console.log(aynulsAge);
+
+//using arrow function
+
+const learn = (a) => {
+    console.log("hello " + a);
+};
+
+learn(12);
+
+const newName = () => {
+
+}
+
+
+// spread operator in es6
+const num = ['a',23,'bc','ed',4,7];
+console.log(num);
+const newNum = [...num, 4, 5, 7];
+console.log(newNum);
+
+//rest operator in es6
+
+const learnArgs = (...args) => {
+    console.log(args);
+
+}
+learnArgs(1,3,24,43,2,3);
+
+const dekkoIt = (...args) =>{
+    console.log(args);
+
+       
+}
+
+const obj = Object.assign({}, [dekkoIt]);
+console.log(obj);  
+
+
+
+/// distructyring
+// its use in object of js
+
+const course = {
+    name : "react course",
+    details : {
+        price : "200 tk",
+        duration : "3 hrs",
+        customer : {
+            custname : "avee",
+            custage : "26",
+            education : {
+                university : "DIU",
+                semester : "6",
+            }
+        }
+
+    }
+};
+
+console.log(course);
+
+const {name} = course;
+console.log(name);
+
+const {details : {price}} = course;
+console.log(price);
+
+const {customer :{custage}} = course.details;
+console.log(custage);
+
+const {education :{university}} = course.details.customer;
+console.log(university);
+
+const {details : {duration}} = course;
+console.log(duration);
+
+
+const avee = {
+    emp_name : "avee chakraborty",
+    age : 24,
+    university : "DIU",
+    office : {
+        ofc_name : "dekko",
+        dept : {
+            dept_name : "IT",
+            section : "software",
+            team : "backend"
+        }
+    }
+
+}
+
+
+
+const {emp_name} = avee;
+console.log(emp_name);
+const {office:{ofc_name}} = avee;
+console.log(ofc_name);
+
+
+/// array methods in es6
+
+// there are some array method those not change the main array element
+// those will create new instance of those arrays 
+// not change in main array
+// those array function are : filter(), find(), findIndex(), splice(),concat()
+
+const newNumbers = [1,4,7,10,15];
+
+
+
+//it will filter all of list item in the list based on condtion
+const filterNewNumbers = newNumbers.filter((num) => num =>2);
+console.log(filterNewNumbers);
+
+const filtNum = newNumbers.filter((num) => num<2);
+console.log(filtNum);
+
+const findNumbers = newNumbers.find((num) => num>3);
+const findIndexNumbers = newNumbers.findIndex((num) => num>3);
+// it will find 0, because its find index no 0 and initial index of less than 3
+
+console.log(findIndexNumbers);
+// it will find 1 which index no 0 and initial index of less than 3
+console.log(findNumbers);
+
+const sliceNewNumbers = newNumbers.slice(2,6);
+//it will print [7,10,15]
+console.log(sliceNewNumbers);
+
+// it will add array item in newNumbers by using concate()
+
+const concatNewNumbers = newNumbers.concat("naimul", "bishunu", "shuvo");
+console.log(concatNewNumbers);
+
+
+const list = [1,"avee",23,56,78,12,656, "nobel", "aynul",23,56,78,12]
+
+//it will filter all of list item in list based on condtion
+
+const filterList = list.filter((num) => num<1000);
+console.log(filterList);
+
+// it will consloe  56 value in output ,bcz of 56 value is greater than 30 , 
+const findList = list.find((num) => num>30);
+console.log(findList);
+
+// it will console index number 3, bcause 56 index number is 3, 56 is greater than 30
+const findIndexList = list.findIndex((num) => num>30);
+console.log(findIndexList);
+
+
+// it will console [23,56,78,12,656,"nobel","aynul",23,56], it will start from index 2 and with 11 length of array
+const sliceList = list.slice(2,11);
+console.log(sliceList);
+console.log(list);
+
+// it will add item in the list array by using concat
+const concatList = list.concat(1,4,6,7,29);
+console.log(concatList);
+
+// there are some es6 built in array function those change the main array 
+// not create instances of array
+// those function are 
+
+const changeNumber = [1,3,5,7,9,34,"avee",34,"nobel"]
+
+const spliceChangeNumber = changeNumber.splice(0,7);
+// it will console [1,3,5,7,9,34,"avee"] , splice() change the main array changeNumber
+// splice start with index 0 to 6 
+console.log(spliceChangeNumber);
+
+// when I console again changeNumber, console shows us [34,"nobel"]
+// bcz of main array is changed now by using splice()
+
+console.log(changeNumber);
+
+const spliceAge = [1,3,5,7,9];
+// it will remove start from index 0, it will remove 3 elements[1,3,5] from this.
+// and add [7,9]
+//final output [20,23,7,9]
+const spliceAgeAddRemove = spliceAge.splice(0, 3, 20, 23);
+
+//it will shows all value remove from changeNumber array [1,3,5]
+console.log(spliceAgeAddRemove);
+
+// now show the updated value of spliceAge array
+console.log(spliceAge);
+
+const pushSplitAge = spliceAge.push(22,25,28);
+// push method directly add elements in main array pushSplitAge[]
+console.log(spliceAge);
+
+// map() in es6
+// it will work like a forloop
+
+
+const employeeNumber = [1,2,3,4,5]
+const employeeNumberMap = employeeNumber.map((num) => {
+    return num*2
+});
+// it will print in console [2,4,6,8,10]
+console.log(employeeNumberMap);
+
+const game = [3,7,11,13];
+const gameMap = game.map((num) => {
+    return num*num;
+
+});
+// it will print in console [9,49,121,144]
+console.log(gameMap);
+
